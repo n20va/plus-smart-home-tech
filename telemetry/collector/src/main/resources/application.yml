@@ -1,0 +1,13 @@
+spring:
+kafka:
+  bootstrap-servers: localhost:9092
+
+collector:
+  kafka:
+    retries: 3
+    delivery-timeout-ms: 10000
+    request-timeout-ms: 10000
+    topics:
+      hubs-events: telemetry.hubs.v1
+      sensors-events: telemetry.sensors.v1
+      snapshots-events: telemetry.snapshots.v1
